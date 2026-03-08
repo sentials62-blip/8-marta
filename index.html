@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>💕 С 8 марта | История любви</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ЭЛЕГАНТНЫЙ ФОН -->
+    <div class="luxury-bg">
+        <div class="glow-sphere"></div>
+        <div class="glow-sphere sphere-2"></div>
+        <div class="floating-particles" id="floatingParticles"></div>
+    </div>
+
+    <!-- ЦЕНТРАЛЬНЫЙ КОНТЕЙНЕР -->
+    <div class="center-stage">
+        <!-- ТАЙМЕР -->
+        <div class="screen timer active" id="timer">
+            <div class="timer-card">
+                <div class="timer-display">
+                    <span class="timer-number" id="timerNumber">3</span>
+                </div>
+                <p class="timer-label">приготовься</p>
+            </div>
+        </div>
+
+        <!-- СЛОВА (ИСПРАВЛЕНО) -->
+        <div class="screen words" id="words">
+            <div class="words-stage" id="wordsStage"></div>
+        </div>
+
+        <!-- КОТИК -->
+        <div class="screen cat" id="cat">
+            <div class="cat-card">
+                <div class="cat-frame">
+                    <img src="images/cat.gif" alt="Котик" class="cat-image">
+                </div>
+                <div class="cat-timer" id="catTimer">10</div>
+            </div>
+        </div>
+
+        <!-- КНИГА С ФОТО -->
+        <div class="screen book" id="book">
+            <div class="book-wrapper">
+                <div class="book-pages" id="bookPages">
+                    <!-- Страница 1: Обложка -->
+                    <div class="book-page active" id="page1">
+                        <div class="page-content cover">
+                            <h1 class="cover-title">наша история</h1>
+                            <div class="cover-decor">✨</div>
+                            <p class="cover-sub">7 страниц счастья</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Страница 2: Фото 1 -->
+                    <div class="book-page" id="page2">
+                        <div class="page-content photo">
+                            <div class="photo-frame">
+                                <img src="photos/1.jpg" alt="Фото 1" class="photo-img">
+                            </div>
+                            <p class="photo-caption">моя сладкая ❤️</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Страница 3: Фото 2 -->
+                    <div class="book-page" id="page3">
+                        <div class="page-content photo">
+                            <div class="photo-frame">
+                                <img src="photos/2.jpg" alt="Фото 2" class="photo-img">
+                            </div>
+                            <p class="photo-caption">моя маленькая 💕</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Страница 4: Фото 3 -->
+                    <div class="book-page" id="page4">
+                        <div class="page-content photo">
+                            <div class="photo-frame">
+                                <img src="photos/3.jpg" alt="Фото 3" class="photo-img">
+                            </div>
+                            <p class="photo-caption">твои глаза ✨</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Страница 5: Фото 4 -->
+                    <div class="book-page" id="page5">
+                        <div class="page-content photo">
+                            <div class="photo-frame">
+                                <img src="photos/4.jpg" alt="Фото 4" class="photo-img">
+                            </div>
+                            <p class="photo-caption">твоя красота 💫</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Страница 6: Фото 5 -->
+                    <div class="book-page" id="page6">
+                        <div class="page-content photo">
+                            <div class="photo-frame">
+                                <img src="photos/5.jpg" alt="Фото 5" class="photo-img">
+                            </div>
+                            <p class="photo-caption">причина улыбки 🌸</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Страница 7: Фото 6 -->
+                    <div class="book-page" id="page7">
+                        <div class="page-content photo">
+                            <div class="photo-frame">
+                                <img src="photos/6.jpg" alt="Фото 6" class="photo-img">
+                            </div>
+                            <p class="photo-caption">моё счастье 💖</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Страница 8: Текст -->
+                    <div class="book-page" id="page8">
+                        <div class="page-content text">
+                            <div class="text-lines">
+                                <p>ты моя радость</p>
+                                <p>встретив тебя,</p>
+                                <p>я начал смотреть на мир</p>
+                                <p>по-другому</p>
+                                <p>спасибо тебе за всё</p>
+                                <p>люблю тебя, жаным</p>
+                                <div class="text-heart">❤️</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-controls">
+                    <button class="control-btn prev" id="prevPage">←</button>
+                    <span class="page-counter" id="pageCounter">1/7</span>
+                    <button class="control-btn next" id="nextPage">→</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ФИНАЛЬНОЕ СЕРДЦЕ (ПЛОТНОЕ) -->
+        <div class="screen final" id="final">
+            <div class="heart-canvas" id="heartCanvas"></div>
+            <div class="final-message">
+                <h2 class="final-message-title">с 8 марта</h2>
+                <p class="final-message-text">любимая</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
