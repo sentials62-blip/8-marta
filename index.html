@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>💕 С 8 марта | История любви</title>
+    <!-- ЭЛЕГАНТНЫЕ ШРИФТЫ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- НЕЖНЫЙ ФОН С ПРОЗРАЧНЫМИ СЕРДЕЧКАМИ -->
+    <div class="soft-gradient"></div>
+    <div class="floating-hearts" id="floatingHearts"></div>
+    
+    <!-- QR ЭКРАН -->
+    <div class="screen qr-screen" id="qrScreen">
+        <div class="qr-card fade-in">
+            <h1 class="qr-title playfair-bold">открой</h1>
+            <div class="qr-circle">
+                <div class="qr-inner">🔮</div>
+            </div>
+            <p class="qr-subtitle montserrat-light">сканируй</p>
+        </div>
+    </div>
+
+    <!-- ТАЙМЕР -->
+    <div class="screen timer-screen" id="timerScreen">
+        <div class="timer-card fade-in">
+            <div class="timer-circle">
+                <svg width="280" height="280" viewBox="0 0 280 280">
+                    <circle cx="140" cy="140" r="130" fill="none" stroke="rgba(255,215,215,0.1)" stroke-width="2"/>
+                    <circle class="timer-progress" cx="140" cy="140" r="130" fill="none" stroke="#ff9e9e" stroke-width="3" stroke-dasharray="816" stroke-dashoffset="0" stroke-linecap="round"/>
+                </svg>
+                <div class="timer-number playfair-bold" id="timerDisplay">3</div>
+            </div>
+            <p class="timer-text montserrat-light">приготовься</p>
+        </div>
+    </div>
+
+    <!-- ПОЗДРАВЛЕНИЕ -->
+    <div class="screen greeting-screen" id="greetingScreen">
+        <div class="greeting-content">
+            <div class="words-container" id="wordsContainer"></div>
+        </div>
+    </div>
+
+    </div>
+    <!-- КОТИК -->
+    <div class="screen cat-screen" id="catScreen">
+        <div class="cat-card fade-in">
+            <div class="cat-placeholder" id="catGif">
+                    <!-- СЮДА ДОБАВЬ ЭТУ СТРОКУ -->
+                    <img src="images/cat.gif" alt="Котик" style="width: 100%; height: 100%; object-fit: cover; border-radius: 130px;">
+            </div>
+            <div class="cat-timer playfair-regular" id="catTimer">10</div>
+        </div>
+    </div>
+
+    <!-- НАСТОЯЩАЯ КНИГА -->
+    <div class="screen book-screen" id="bookScreen">
+        <div class="book-scene">
+            <div class="realistic-book" id="realBook">
+                <!-- Обложка -->
+                <div class="book-cover front">
+                    <div class="cover-content">
+                        <h2 class="cover-title playfair-bold">наша история</h2>
+                        <div class="cover-decoration">✨</div>
+                        <p class="cover-subtitle montserrat-light">листай</p>
+                    </div>
+                    <div class="book-spine"></div>
+                </div>
+                
+                <!-- Страница 1 -->
+                <div class="book-leaf leaf-1">
+                    <div class="page front">
+                        <div class="page-content">
+                            <div class="photo-frame">
+                                <div class="photo-placeholder" id="photo1"></div>
+                            </div>
+                            <p class="photo-caption playfair-italic">твой взгляд</p>
+                        </div>
+                    </div>
+                    <div class="page back">
+                        <div class="page-content">
+                            <div class="photo-frame">
+                                <div class="photo-placeholder" id="photo2"></div>
+                            </div>
+                            <p class="photo-caption playfair-italic">твоя улыбка</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Страница 2 -->
+                <div class="book-leaf leaf-2">
+                    <div class="page front">
+                        <div class="page-content">
+                            <div class="photo-frame">
+                                <div class="photo-placeholder" id="photo3"></div>
+                            </div>
+                            <p class="photo-caption playfair-italic">твоя красота</p>
+                        </div>
+                    </div>
+                    <div class="page back">
+                        <div class="page-content">
+                            <div class="photo-frame">
+                                <div class="photo-placeholder" id="photo4"></div>
+                            </div>
+                            <p class="photo-caption playfair-italic">твоя нежность</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Задняя обложка -->
+                <div class="book-cover back">
+                    <div class="cover-content">
+                        <h3 class="cover-title playfair-bold">ты</h3>
+                        <div class="cover-decoration">💕</div>
+                        <p class="cover-subtitle montserrat-light">самая лучшая</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="book-navigation">
+                <button class="nav-arrow prev" id="prevPage">←</button>
+                <span class="page-number playfair-regular" id="pageNumber">1/4</span>
+                <button class="nav-arrow next" id="nextPage">→</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ФИНАЛЬНОЕ СЕРДЦЕ ИЗ ФОТО -->
+<div class="screen heart-screen" id="heartScreen">
+    <div class="heart-canvas" id="heartCanvas"></div>
+    <div class="final-message">
+        <h1 class="final-title">с 8 марта</h1>
+        <p class="final-text">ты моё вдохновение</p>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
